@@ -1,0 +1,6 @@
+torch
+timm
+torch-geometric
+networkx
+scipy
+python-louvain

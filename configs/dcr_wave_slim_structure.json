@@ -1,0 +1,61 @@
+{
+  "variant": "slim_w0667",
+  "backbone": {
+    "patch_size": 4,
+    "in_chans": 3,
+    "num_classes": 10,
+    "depths": [
+      2,
+      2,
+      12,
+      2
+    ],
+    "dims": [
+      64,
+      128,
+      256,
+      512
+    ],
+    "graph_patch": 32,
+    "distance_thres": 100,
+    "node_thres": 5,
+    "k_near": 3,
+    "node_num": 7,
+    "input_dim": 3072,
+    "hidden_dim": 512,
+    "output_dim": [
+      64,
+      128,
+      256,
+      512
+    ],
+    "drop_path_rate": 0.2,
+    "patch_norm": true,
+    "post_norm": true,
+    "layer_scale": 1e-05,
+    "use_checkpoint": false,
+    "mlp_ratio": 4.0,
+    "img_size": 640,
+    "act_layer": "GELU",
+    "infer_mode": false
+  },
+  "decoder": {
+    "implementation": "RTDETRTransformer (external, not bundled)",
+    "feat_channels": [
+      512
+    ],
+    "feat_strides": [
+      32
+    ],
+    "hidden_dim": 256,
+    "num_levels": 1,
+    "num_queries": 100,
+    "num_decoder_layers": 6,
+    "num_denoising": 300,
+    "eval_idx": -1,
+    "eval_spatial_size": [
+      640,
+      640
+    ]
+  }
+}
